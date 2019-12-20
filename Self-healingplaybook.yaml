@@ -6,10 +6,13 @@
     uri:
      url: "{{dtproblemURL}}"
      method: GET
+     return_content: yes
+     status_code: 200
+     body_format: json     
      register: result
  
      debug:
-      msg: "{{There is problem with service result}}"
+      msg: "{{result.json}}"
 
 
   - name: Starting easytravel
