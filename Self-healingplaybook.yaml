@@ -10,8 +10,7 @@
  
      debug:
       msg: "{{There is problem with service result}}"
-    when:
-      (result.json.totalOpenProblemsCount == "1")  
+
 
   - name: Starting easytravel
     service:
