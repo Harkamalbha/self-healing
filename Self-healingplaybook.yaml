@@ -11,7 +11,7 @@
      body_format: json     
     register: result
  
-    debug:
+  - debug:
       msg: "{{result.json}}"
 
 
