@@ -4,7 +4,7 @@
   tasks:
   - name: read JSON of problem status
     uri:
-     url: "{{dtproblemURL}}"
+     url: {{dtproblemURL}}
      method: GET
      return_content: yes
      status_code: 200
