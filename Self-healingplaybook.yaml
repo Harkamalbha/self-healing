@@ -12,7 +12,7 @@
     register: result
  
   - debug:
-      msg: "{{result.json.totalOpenProblemsCount}}"
+      msg: "{{result.json}}"
 
 
   - name: Starting easytravel
