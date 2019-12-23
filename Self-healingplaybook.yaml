@@ -16,13 +16,3 @@
  
   - name: restart the troubled service!!
     shell: sh /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh &
-   
-  - name: push success comment to dynatrace
-    uri:
-      url: "{{dtcommentapiurl}}"
-      method: POST
-      body_format: json
-      body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"user\": \"{{commentuser}}\", \"context\": \"Ansible Tower\" }"
-      when: state == "OPEN" and result.rc != 'Active'
-    
-   
