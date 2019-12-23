@@ -15,4 +15,14 @@
       msg: "{{output.json.result.totalOpenProblemsCount==0}}"
  
   - name: restart the troubled service!!
-    shell: java -jar /home/hkbhandari/dynatrace-easytravel-linux-x86_64.jar
+    shell: java -jar /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh
+   
+  - name: push success comment to dynatrace
+     uri:
+       url: "{{dtcommentapiurl}}"
+       method: POST
+       body_format: json
+       body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"user\": \"{{commentuser}}\", \"context\": \"Ansible Tower\" }"
+      when: state == "OPEN" and result.rc != 'Active'
+    
+   
