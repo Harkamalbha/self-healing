@@ -15,8 +15,8 @@
       msg: "{{output.json.result.totalOpenProblemsCount}}"
 
 
-  - name: Restarting easytravel
-    server:
+   - name: Restarting easytravel
+     server:
       state: restarted
       wasdir: hkbhandari/dynatrace-easytravel-linux-x86_64.jar 
       name: easytravel
