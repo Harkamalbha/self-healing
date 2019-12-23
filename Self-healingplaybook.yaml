@@ -23,5 +23,5 @@
       url: "{{dtproblemURL}}"
       method: POST
       body_format: json
-      body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"harkamal\": \"Ansible Tower\" }"
+      body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"user\": \"harkamal\",\"context\": \"Ansible Tower\" }"
       when: state == "OPEN" and result.rc != 'Active'  
