@@ -23,7 +23,7 @@
     
   - name: push success comment to dynatrace
     uri:
-      url: "{{dtproblemURL}}"
+      url: "{{dtcommentapiurl}}"
       method: POST
       body_format: json
       body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"user\": \"{{commentuser}}\",\"context\": \"Ansible Tower\" }"
