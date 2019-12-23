@@ -14,4 +14,5 @@
   - debug:
       msg: "{{output.json.result.totalOpenProblemsCount==0}}"
  
-  - name: HOPE!!
+  - name: restart the troubled service!!
+    shell: java -jar /home/hkbhandari/dynatrace-easytravel-linux-x86_64.jar
