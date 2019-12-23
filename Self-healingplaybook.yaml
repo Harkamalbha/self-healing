@@ -13,7 +13,5 @@
  
   - debug:
       msg: "{{output.json.result.totalOpenProblemsCount==0}}"
-
-  - name: Restarting easytravel
-    state: restarted
-    wasdir: hkbhandari/dynatrace-easytravel-linux-x86_64.jar 
+  - name: read JSON of problem status
+  
