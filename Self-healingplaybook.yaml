@@ -9,7 +9,7 @@
      return_content: yes
      status_code: 200
      body_format: json     
-    register: output
+     register: output
     
   - debug:
       msg: "{{output.json.result.totalOpenProblemsCount==0}}"
