@@ -12,14 +12,14 @@
     register: output
     
   - debug:
-      msg: "{{output.json.result.totalOpenProblemsCount==0}}"
+      msg: "{{output.json.result.totalOpenProblemsCount==1}}"
  
   - name: restart the troubled service!!
     shell: sh /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh &
     
   - name: push success comment to dynatrace
     uri:
-      url: "{{dtcommentapiurl}}"
+      url: "{{dtproblemURL}}"
       method: POST
       body_format: json
       body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"user\": \"{{commentuser}}\", \"context\": \"Ansible Tower\" }"
