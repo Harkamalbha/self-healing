@@ -1,7 +1,6 @@
 - name: selfhealing
   hosts: all
-  commentuser: "Ansible Playbook"
-
+  
   
   tasks:
   - name: read JSON of problem status
