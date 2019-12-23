@@ -1,5 +1,7 @@
 - name: selfhealing
   hosts: all
+  vars:
+   commentuser: "hk"
   
   
   tasks:
