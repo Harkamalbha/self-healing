@@ -13,5 +13,5 @@
     
   - debug:
       msg: "{{output.json.result.totalOpenProblemsCount==0}}"
-  
-  - name: WHYYY  
+   
+   - name: WHYYY  
