@@ -15,7 +15,7 @@
       msg: "{{output.json.result.totalOpenProblemsCount==0}}"
  
   - name: restart the troubled service!!
-    shell: sh /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh
+    shell: sh /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh &
    
   - name: push success comment to dynatrace
     uri:
