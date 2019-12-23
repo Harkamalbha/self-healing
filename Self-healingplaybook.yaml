@@ -1,9 +1,6 @@
 - name: selfhealing
   hosts: all
-  vars:
-   commentuser: "hk"
-   payload:
-    ProblemID: "{{ProblemID}}"
+  
   
   tasks:
   - name: read JSON of problem status
@@ -23,7 +20,7 @@
     
   - name: push success comment to dynatrace
     uri:
-      url: "{{dtcommentapiurl}}"
+      url: "{{dtproblemURL}}"
       method: POST
       body_format: json
       body: "{ \"comment\": \"Invoked remediation action successfully executed.\", \"user\": \"{{commentuser}}\",\"context\": \"Ansible Tower\" }"
