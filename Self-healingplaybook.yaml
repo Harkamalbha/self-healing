@@ -4,8 +4,8 @@
    commentuser: "hk"
    payload:
     ProblemID: "{{ProblemID}}"
-   -debug:
-      msg: "{{ProblemID}}"
+- debug:
+     msg: "{{ProblemID}}"
   
   tasks:
   - name: read JSON of problem status
