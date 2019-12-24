@@ -4,8 +4,6 @@
    commentuser: "hk"
    payload:
     ProblemID: "{{ProblemID}}"
-- debug:
-     msg: "{{ProblemID}}"
   
   tasks:
   - name: read JSON of problem status
@@ -18,7 +16,7 @@
     register: output
     
   - debug:
-      msg: "{{output.json.result.totalOpenProblemsCount==1}}"
+      msg: "{{ProblemID}}"
  
   - name: restart the troubled service!!
     shell: sh /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh &
