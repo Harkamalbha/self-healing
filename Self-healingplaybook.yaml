@@ -17,8 +17,6 @@
     
   - debug:
       msg: "{{pid}}"
-  -debug:
-     msg: "{{output.json.result.totalOpenProblemsCount==1}}"
  
   - name: restart the troubled service!!
     shell: sh /home/hkbhandari/easytravel-2.0.0-x64/weblauncher/weblauncher.sh &
